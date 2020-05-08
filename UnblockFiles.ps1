@@ -1,16 +1,16 @@
-﻿ function UnblockFiles
+
+function UnBlockFilesAndDLL
 {
     param
     (
         [parameter(Mandatory=$true)]
-        [String] $path     
-        
-         
+        [String] $path 
     )
     process
     {
-          ## gci $Path | Unblock-File | -WhatIf
-           gci $Path | Unblock-File 
+             
+                  gci $path | Unblock-File 
+                  Write-Host "Above files are Unblocked in the location "$path  -foregroundcolor green               
     }
  }
  
